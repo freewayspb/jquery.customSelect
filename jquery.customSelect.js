@@ -26,7 +26,7 @@
             prefix = options.customClass,
             changed = function ($select,customSelectSpan) {
                 var currentSelected = $select.find(':selected'),
-                customSelectSpanInner = customSelectSpan.children(':first'),
+                customSelectSpanInner = customSelectSpan.children(':last'),
                 html = currentSelected.html() || '&nbsp;';
 
                 customSelectSpanInner.html(html);
