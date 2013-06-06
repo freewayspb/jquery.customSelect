@@ -50,9 +50,10 @@
                 var $select = $(this),
                     customSelectInnerSpan = $('<span />').addClass(getClass('Inner')),
                     customSelectSpan = $('<span />'),
+                    customSelectIcon = $('<span />').addClass('icon-down-open'),
                     position = $select.position();
 
-                $select.after(customSelectSpan.append(customSelectInnerSpan));
+                $select.after(customSelectSpan.append(customSelectInnerSpan).prepend(customSelectIcon));
                 
                 customSelectSpan.addClass(prefix);
 
