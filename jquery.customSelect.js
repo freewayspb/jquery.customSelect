@@ -26,7 +26,7 @@
             prefix = options.customClass,
             changed = function ($select,customSelectSpan) {
                 var currentSelected = $select.find(':selected'),
-                customSelectSpanInner = customSelectSpan.children(':last'),
+                customSelectSpanInner = customSelectSpan.children(':first'),
                 html = currentSelected.html() || '&nbsp;';
 
                 customSelectSpanInner.html(html);
@@ -53,7 +53,7 @@
                     customSelectIcon = $('<span />').addClass('icon-down-open'),
                     position = $select.position();
 
-                $select.after(customSelectSpan.append(customSelectInnerSpan).prepend(customSelectIcon));
+                $select.after(customSelectSpan.append(customSelectInnerSpan).append(customSelectIcon));
                 
                 customSelectSpan.addClass(prefix);
 
